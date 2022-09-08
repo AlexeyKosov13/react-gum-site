@@ -1,9 +1,15 @@
+import './Normalize.scss';
 import './App.css';
 import Hero from './components/Hero/Hero';
+import Programs from './components/Programs/Programs';
+import Reasons from './components/Reasons/Reasons';
+
 function App() {
   return (
-    <div className="App">
-        <Hero />
+    <div className="App site-container">
+      <Hero />
+      <Programs />
+      <Reasons />
     </div>
   );
 };

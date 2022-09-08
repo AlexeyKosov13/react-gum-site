@@ -1,0 +1,58 @@
+.programs {
+
+    &__categories {
+        display: flex;
+        gap: 1rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+    }
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-color);
+    padding: 2rem;
+    gap: 1rem;
+    justify-content: space-between;
+    transition: all 0.2s;
+
+    &__btn {
+        cursor: pointer;
+    }
+
+    
+    &>svg {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--white-color);
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    &__descr {
+        font-size: 0.9rem;
+        line-height: 25px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+
+        &>img {
+            width: 1.5rem;
+        }
+    }
+
+    &:hover {
+        background: var(--planCard);
+        transition: all 0.2s;
+    }
+
+    
+}

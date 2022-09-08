@@ -1,0 +1,37 @@
+.header {
+
+    &__wrapper {
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+       height: 60px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        color: var(--white-color);
+    }
+
+    &__item:not(:last-of-type) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        transition: color 0.3s;
+        
+        &:hover {
+            color: var(--lime-color);
+            transition: color 0.3s;
+        }
+    }
+}

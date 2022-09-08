@@ -1,0 +1,213 @@
+.hero {
+    padding: 0 0 0 30px;
+    display: flex;
+    height: 100vh;
+
+    &__content {
+        flex:3;
+        padding-right: 10px;
+    }
+
+    &__right {
+        flex: 1;
+        position: relative;
+        background-color: var(--lime-color);
+    }
+
+    &__ad {
+        display: flex;
+        margin-top: 4rem;
+        background-color: #363d42;
+        border-radius: 4rem;
+        width: fit-content;
+        padding: 20px 18px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+
+        &-text {
+            z-index: 3;
+            position: relative;
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        background-color: var(--lime-color);
+        width: 5.4rem;
+        height: 80%;
+        left: 8px;
+        border-radius: 3rem;
+        z-index: 1;
+    }
+
+    &__text {
+        color: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        max-width: 700px;
+
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        max-width: 650px;
+    }
+
+    &__descr {
+        margin-top: 1rem;
+        font-size: 1rem;
+        letter-spacing: 1px;       
+    }
+
+    &__figures {
+        display: flex;
+        margin-top: 2rem;       
+    }
+
+    &__figure:not(:last-of-type) {
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__buttons {
+        margin-top: 1.5rem;
+        display: flex;
+    }
+
+    &__btn {
+        min-width: 10rem;
+    }
+
+    &__btn:not(:last-of-type) {
+        margin-right: 10px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 5rem;
+        right: 10rem;
+        width: 23rem;
+
+        &-back {
+            position: absolute;
+            top: 5rem;
+            right: 14rem;
+            z-index: -1;
+        }
+    }
+
+}
+
+.figure {
+    max-width: 200px;
+    &__total {
+        color: var(--white-color);
+        font-size: 2rem;
+    }
+
+    &__text {
+        margin-top: 0.5rem;
+        color: var(--gray-color);
+        text-transform: uppercase;
+    }
+}
+
+.btn--orange {
+    color: var(--white-color);
+    background-color: var(--lime-color); 
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--lime-color);
+        background-color: var(--white-color);
+        transition: all 0.3s;
+    }
+}
+
+.btn--transp {
+    color: var(--white-color);
+    background-color: transparent;
+    border: 4px solid var(--lime-color);
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--lime-color);
+        background-color: var(--white-color);
+        transition: all 0.3s;
+    }
+}
+
+.btn__enter {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+
+    &:hover {
+        background-color: var(--lime-color);
+        border: 4px solid var(--white-color);
+    }
+}
+
+.heart {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-color);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+    right: 4rem;
+    top: 7rem;
+
+    &__img {
+        width: 35px;
+        height: 30px;
+    }
+
+    &__rate {
+        margin-top: 0.5rem;
+        color: #363d42;
+    }
+
+    &__total {
+        color: var(--white-color);
+        font-size: 1.3em;
+    }
+}
+
+.calories {
+    display: flex;
+    padding: 1rem;
+    width: fit-content;
+    background-color: var(--caloryCard);
+    border-radius: 5px;
+    position: absolute;
+    top: 32rem;
+    right: 28rem;
+
+    &__img {
+        width: 3rem;
+        padding-right: 10px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__burned {
+        color: var(--gray-color);
+    }
+
+    &__total {
+        color: var(--white-color);
+    }
+}
