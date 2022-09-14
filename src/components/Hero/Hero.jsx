@@ -3,7 +3,8 @@ import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <section className="hero">     
+    <section className="hero">    
+    <div className="hero__blur blur"></div>  
         <div className="hero__content">
           <Header />
           <div className="hero__ad">

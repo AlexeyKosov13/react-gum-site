@@ -28,7 +28,7 @@ html {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
   font-weight: 400;
 	margin: 0;
 }
@@ -126,4 +126,26 @@ img {
   text-transform: uppercase;
   text-align: center;
   font-style: italic;
+}
+
+
+.section-subtitle {
+  font-weight: 700;
+  color: var(--lime-color);
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--white-color);
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.blur {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(89, 224, 47, 0.69);
+  filter: blur(150px);
+  z-index: -9;
 }

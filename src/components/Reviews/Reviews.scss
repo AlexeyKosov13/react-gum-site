@@ -1,0 +1,80 @@
+.reviews {
+    padding-bottom: 50px;
+
+    &__container {
+        display: flex;   
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        letter-spacing: 2px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__status {
+        text-transform: uppercase;
+        font-weight: 700;
+
+        >span {
+            color: var(--lime-color);
+        }
+    }
+
+    &__right {
+        flex: 1;
+        position: relative;
+
+        &>:nth-child(1) {
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            border: 2px solid var(--lime-color);
+            background-color: transparent;
+            right: 9rem;
+            top: 0.9rem;
+        }
+
+        &>:nth-child(2) {
+            position: absolute;
+            width: 17rem;
+            height: 19rem;
+            background: var(--planCard);        
+            right: 7rem;
+            top: 4rem;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 17rem;
+        height: 20rem;
+        object-fit: cover;
+        right: 8rem;
+        top: 2rem;
+    }
+
+    &__arrows {
+        display: flex;
+        position: absolute;
+        bottom: 1rem;
+        left: 3rem;
+        gap: 1rem;
+    }
+
+    &__arrow {
+        width: 1.5rem;
+        cursor: pointer;
+    }
+  
+}

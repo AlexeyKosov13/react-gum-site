@@ -1,4 +1,5 @@
 .reasons {
+    padding-bottom: 50px;
     &__container {
         display: flex;
     }
@@ -7,7 +8,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-        grid-auto-rows: 1fr;
 
         img {
             object-fit: cover;
@@ -42,5 +42,65 @@
 
     &__right {
         flex: 1 1;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    &__title {
+        font-size: 3rem;
+        color: var(--white-color);
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        position: relative;
+        font-size: 1rem;
+        padding-left: 40px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+
+        &:before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url("../../assets/tick.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &__partners {
+        
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__partner {
+        width: 2.5rem;
     }
 }
+
+.partners {
+    &__title {
+        color: var(--gray-color);
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+}
+
