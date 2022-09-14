@@ -1,10 +1,12 @@
 import "./Reviews.scss";
 import { reviewsData } from "../../data/reviewsData";
 import { useState } from "react";
+import {motion} from "framer-motion";
 
 const Reviews = () => {
   const [selected, setSelected] = useState(0);
   const reviewsLength = reviewsData.length;
+  const transition = {type: 'spring', duration: 3};
 
   return (
     <section className="reviews" id="reviews">

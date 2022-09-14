@@ -9,8 +9,8 @@ const Programs = () => {
               <h2 className="programs__title section-title"><span className='stroke-text'>наши </span>  программы <span className='stroke-text'>для вашей</span> фигуры</h2>
               
               <div className="programs__categories">
-                  {programsData.map((program) => (
-                      <div className="category">
+                  {programsData.map((program, index) => (
+                      <div className="category" key={index}>
                           {program.image}
                           <span className='category__title'>{program.heading}</span>
                           <span className='category__descr'>{program.details}</span>
