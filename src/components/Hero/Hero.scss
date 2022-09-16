@@ -209,7 +209,9 @@
     display: flex;
     padding: 1rem;
     width: fit-content;
-    background-color: var(--caloryCard);
+    backdrop-filter: blur(14px) saturate(146%);
+    -webkit-backdrop-filter: blur(14px) saturate(146%);
+    background-color: rgba(255, 255, 255, 0.11);
     border-radius: 5px;
     position: absolute;
     top: 32rem;
