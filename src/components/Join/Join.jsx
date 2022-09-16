@@ -17,7 +17,7 @@ const Join = () => {
   };
 
   return (
-    <section className="join">
+    <section className="join" id="join">
       <div className="container join__container">
         <div className="join__left">
           <div className="join__line"></div>

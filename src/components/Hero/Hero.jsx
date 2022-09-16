@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import "./Hero.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import NubmerCounter from "number-counter";
 
 const Hero = () => {
@@ -46,8 +47,20 @@ const Hero = () => {
           </div>
 
           <div className="hero__buttons">
-            <div className="btn btn-reset hero__btn btn--orange">Вступить</div>
-            <div className="btn btn-reset hero__btn btn--transp">Узнать больше</div>
+          <div className="btn btn-reset hero__btn btn--orange">
+            <Link
+             to="join"
+             spy={true}
+             smooth={true}
+            >Вступить</Link>
+            </div>
+          <div className="btn btn-reset hero__btn btn--transp">
+          <Link
+             to="reasons"
+             spy={true}
+             smooth={true}
+            >Узнать больше</Link>
+            </div>
           </div>
         </div>
         <div className="hero__right">
