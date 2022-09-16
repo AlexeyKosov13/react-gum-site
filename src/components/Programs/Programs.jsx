@@ -14,7 +14,7 @@ const Programs = () => {
                           {program.image}
                           <span className='category__title'>{program.heading}</span>
                           <span className='category__descr'>{program.details}</span>
-                          <div className="category__btn"><span>Начать</span><img src="assets/rightArrow.png" alt="arrow right" /></div>
+                          <div className="category__btn"><span>Начать</span><img src="assets/rightArrow.png" alt="arrow right" className='category__arrow' /></div>
                       </div>
                   ))}
               </div>

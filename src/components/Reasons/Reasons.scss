@@ -1,5 +1,4 @@
 .reasons {
-    padding-bottom: 50px;
     &__container {
         display: flex;
     }
@@ -101,6 +100,60 @@
         color: var(--gray-color);
         margin-top: 40px;
         margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .reasons {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__right {
+            margin-top: 40px;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .reasons {
+        &__subtitle {
+            font-size: 1rem;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__item {
+            font-size: 0.7rem;
+        }
+
+        &__left {
+            grid-auto-rows: auto;
+            overflow: hidden;
+
+            :nth-child(1) {
+                width: 7rem;
+                height: 17rem;
+            }
+            :nth-child(2) {
+                width: 15rem;
+                height: 10rem;
+            }
+            :nth-child(3) {
+                width: 7rem;
+                height: 6rem;
+            }
+            :nth-child(4) {
+                width: 7rem;
+                height: 6rem;
+            }
+        }
     }
 }
 

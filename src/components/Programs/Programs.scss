@@ -4,8 +4,6 @@
         display: flex;
         gap: 1rem;
         margin-top: 4rem;
-        margin-bottom: 4rem;
-
     }
 }
 
@@ -20,6 +18,17 @@
 
     &__btn {
         cursor: pointer;
+
+
+        &:hover .category__arrow {
+            transform: translateX(10px);
+            transition: transform 0.3s;
+        }
+    }
+
+    &__arrow {
+        transition: transform 0.3s;
+
     }
 
     
@@ -52,7 +61,26 @@
     &:hover {
         background: var(--planCard);
         transition: all 0.2s;
-    }
+    }  
+}
 
-    
+@media screen and (max-width: 768px) {
+    .programs {
+        &__categories {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }    
+    }
+    .category {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .programs {
+        &__categories {
+            flex-direction: column;
+        }
+    }
 }

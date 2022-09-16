@@ -5,7 +5,7 @@ import { plansData } from '../../data/plansData';
 
 const Plans = () => {
   return (
-      <section className="plans__section">
+      <section className="plans__section" id='plans'>
           <div className="blur plans__blur-1"></div>
           <div className="blur plans__blur-2"></div>
           <div className="container plans__container">

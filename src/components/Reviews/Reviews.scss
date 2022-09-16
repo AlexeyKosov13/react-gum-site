@@ -1,5 +1,4 @@
 .reviews {
-    padding-bottom: 50px;
 
     &__container {
         display: flex;   
@@ -25,9 +24,11 @@
     &__status {
         text-transform: uppercase;
         font-weight: 700;
+        display: flex;
 
-        >span {
+        >:nth-child(1) {
             color: var(--lime-color);
+            margin-right: 5px;
         }
     }
 
@@ -74,7 +75,72 @@
 
     &__arrow {
         width: 1.5rem;
+        height: 1.5rem;
         cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s;
+        }
+
+        &:active {
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
     }
   
+}
+
+@media screen and (max-width: 768px) {
+    .reviews {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__right {
+            flex-direction: column;
+
+            >div {
+                display: none;
+                position: relative;
+            }
+            :last-child {
+                display: flex;
+                position: relative;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        &__arrows {
+            margin-top: 20px;
+        }
+
+        &__img {
+            margin-top: 40px;
+            position: relative;
+            align-self: center;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .reviews {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__text {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+    }
 }

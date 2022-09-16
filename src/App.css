@@ -149,3 +149,15 @@ img {
   filter: blur(150px);
   z-index: -9;
 }
+
+@media screen and (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 586px) {
+  .section-title {
+    font-size: 1rem;
+  }
+}

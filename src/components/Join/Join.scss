@@ -1,5 +1,4 @@
 .join {
-    padding-bottom: 50px;
 
     &__container {
         display: flex;
@@ -50,9 +49,60 @@
     &__btn {
         background-color: var(--lime-color);
         color: var(--white-color);
+
+        &:hover {
+            background: var(--white-color);
+            color: var(--lime-color);
+            transition: all 0.3s;
+        }
+
+        &:active {
+            background: var(--lime-color);;
+            color: var(--white-color);
+            transition: all 0.3s;
+        }
     }
 }
 
 ::placeholder {
     color: var(--lightgray);
+}
+
+@media screen and (max-width: 768px) {
+    .join {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__text {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .join {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+
+        &__form {
+            margin-top: 20px;
+            display: flex;
+            gap: 1rem;
+            background-color: var(--gray-color);
+            padding: 0.5rem 1rem;
+    
+            input {
+                background-color: transparent;
+                border: none;
+                color: var(--lightgray);           
+            }
+        }
+    }
 }

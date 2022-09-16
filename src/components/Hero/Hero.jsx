@@ -1,26 +1,25 @@
 import Header from "../Header/Header";
 import "./Hero.scss";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import NubmerCounter from "number-counter";
 
 const Hero = () => {
 
-  const transition = {type: 'spring', duration: 3};
+  const transition = { type: 'spring', duration: 3 };
+  const mobile = window.innerWidth <= 768 ? true : false;
 
   return (
     <section className="hero">    
     <div className="hero__blur blur"></div>  
         <div className="hero__content">
           <Header />
-          <div className="hero__ad">
-            
+          <div className="hero__ad">          
             <motion.div
-            initial={{left: '220px'}}
-            whileInView={{left:'8px'}}
+            initial={{left: mobile?'180px' : '220px'}}
+            whileInView={{left:mobile?'12px':'8px'}}
             transition={{...transition, type: 'tween'}}
             className="hero__circle"
-            ></motion.div>
-           
-           
+            ></motion.div>          
             <span className="hero__ad-text">Лучший фитнесс-клуб в городе</span>
           </div>
           <div className="hero__text">
@@ -31,15 +30,17 @@ const Hero = () => {
           </div>
           <div className="hero__figures">
             <div className="hero__figure figure">
-              <div className="figure__total">+25</div>
+            <div className="figure__total">
+              <NubmerCounter end={25} start={10} delay={4} preFix="+" />
+              </div>
               <div className="figure__text">Профессиональных тренеров</div>
             </div>
             <div className="hero__figure">
-              <div className="figure__total">+450</div>
+              <div className="figure__total"><NubmerCounter end={350} start={300} delay={4} preFix="+" /></div>
               <div className="figure__text">Участников марафона</div>
             </div>
             <div className="hero__figure">
-              <div className="figure__total">+46</div>
+              <div className="figure__total"><NubmerCounter end={45} start={20} delay={4} preFix="+" /></div>
               <div className="figure__text">Фитнесс программ</div>
             </div>
           </div>
